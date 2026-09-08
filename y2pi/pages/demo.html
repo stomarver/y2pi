@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>Pixel Engine Showroom</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+</HEAD>
+<BODY>
+<H1 data-center data-unselectable>Showroom</H1>
+<P data-center>every capability of the engine, labeled</P>
+<HR>
+<H2>1. Headings</H2>
+<H3>third level heading</H3>
+<H4>fourth level heading</H4>
+<H5>fifth level heading</H5>
+<H6>sixth level heading</H6>
+<HR>
+<H2>2. Text flags</H2>
+<P data-center>centered paragraph</P>
+<P data-underlined>underlined paragraph</P>
+<P>one <TT data-unselectable>locked</TT> word</P>
+<P>one <TT data-underlined>underlined</TT> word</P>
+<HR>
+<H2>3. Color;</H2>
+<P data-inactive>dimmed paragraph</P>
+<P>one <TT data-inactive>dimmed</TT> word</P>
+<P data-color="red">named color: red</P>
+<P data-color="11">indexed color: 11</P>
+<P data-color="#00FF00">hex color: green</P>
+<P>one <TT data-color="cyan">painted</TT> word</P>
+<P><TT data-color="u_black">black</TT> <TT data-color="u_blue">blue</TT>
+<TT data-color="u_green">green</TT> <TT data-color="u_cyan">cyan</TT>
+<TT data-color="u_red">red</TT> <TT data-color="u_magenta">magenta</TT>
+<TT data-color="u_yellow">yellow</TT> <TT data-color="u_gray">gray</TT></P>
+<HR>
+<H2>4. Links</H2>
+<P>plain <A HREF="https://example.com">link</A>, hover inverts it</P>
+<P>click a link, it turns <A HREF="https://example.org">visited</A></P>
+<P>underlined <A HREF="https://example.net" data-underlined>link</A></P>
+<P><A HREF="https://example.edu" data-unselectable>locked link</A> still clicks</P>
+<P><A HREF="https://example.io" data-color="yellow">painted link</A> stays yellow</P>
+<HR>
+<H2>5. Lists</H2>
+<UL>
+<LI>first</LI>
+<LI>second with <A HREF="https://example.com">link</A></LI>
+<LI>third</LI>
+</UL>
+<UL data-center data-unselectable>
+<LI>centered locked item</LI>
+<LI data-underlined>underlined locked item</LI>
+</UL>
+<OL>
+<LI>ordered works too</LI>
+<LI>same numbers</LI>
+</OL>
+<HR>
+<H2>6. Input</H2>
+<P>drag to select, ctrl+c to copy</P>
+<P>double-click: word, triple-click: block</P>
+<HR>
+<H2>7. Markup</H2>
+<XYZ>unknown tag renders as paragraph</XYZ>
+<DIV><P>wrapped paragraph passes through</P></DIV>
+<!-- Embedding: one file, the framework pulls the rest itself. -->
+<SCRIPT SRC="../api/boot.js"></SCRIPT>
+</BODY>
+</HTML>
