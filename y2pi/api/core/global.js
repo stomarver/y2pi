@@ -1,6 +1,30 @@
 // ================= global.js =================
 // Глобальная конфигурация. Грузится первым: остальные файлы опираются на G.
+// Это данные, не поведение: классом не оборачивается.
+// Цвета (таблица, режимы) живут в scene/colors.js: класс Palette.
+// Шрифт и его сетка живут в font/font.js: класс RFONT.
 
+/**
+ * @typedef {Object} Config
+ * @property {number} TICK_HZ
+ * @property {number[]} SCALE_STEPS
+ * @property {number[]} SCALE_WIDTHS
+ * @property {number} SCALE_GAP
+ * @property {number} SAFE_MARGIN
+ * @property {number} MIN_VIEW
+ * @property {("floor"|"round"|"ceil")} PIX_MODE
+ * @property {number} TITLE_H
+ * @property {number} RULE_H
+ * @property {number} UNDERLINE_H
+ * @property {number} BLOCK_GAP
+ * @property {number} ITEM_GAP
+ * @property {number} SCROLL_STEP
+ * @property {number} WHEEL
+ * @property {boolean} NEGATIVE
+ * @property {number} MULTI_CLICK_MS
+ */
+
+/** @type {Config} */
 var G = {
   // Тики
   TICK_HZ: 30,              // тиков в секунду
@@ -19,22 +43,14 @@ var G = {
   // "floor" (влево/вверх), "round", "ceil". Центрирование всегда влево.
   PIX_MODE: "floor",
 
-  // Шрифт и сетка
-  FONT: "VGA",
-  FONT_FILE: "VGA/WebPlus_IBM_VGA_8x16.woff",  // путь от /fonts
-  FONT_FALLBACK: "monospace",
-  CELL_W: 8,                // ширина символа, px (моноширинность обязательна)
-  CELL_H: 16,               // высота строки, px
+  // Типографика сцены (шрифтовая сетка — в RFONT)
   TITLE_H: 32,              // высота заголовка H1, px
   RULE_H: 2,                // толщина линейки, px
   UNDERLINE_H: 1,           // толщина подчёркивания, px
-  ALPHA_CUT: 128,           // порог альфы глифов: ниже = прозрачный
   BLOCK_GAP: 16,            // зазор между блоками, px
   ITEM_GAP: 0,              // добавочный зазор между пунктами списка, px
   SCROLL_STEP: 16,          // шаг прокрутки колесом, px
   WHEEL: 1.0,               // сила колеса мыши, множитель
-
-  // Цвета живут в colors.js: G.PALETTE, G.MODE_DARK, G.MODE_LIGHT.
 
   // Режим: true = светлый текст на чёрном (негатив), false = наоборот
   NEGATIVE: true,
@@ -42,5 +58,3 @@ var G = {
   // Ввод
   MULTI_CLICK_MS: 300       // окно двойного/тройного клика, мс
 };
-
-var TICK_MS = 1000 / G.TICK_HZ;

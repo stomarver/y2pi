@@ -1,0 +1,8 @@
+Y2π
+
+Y2π renders web interfaces directly from Markdown. It uses a Canvas/WebGL framebuffer for pixel‑perfect output, 
+and separates layout, themes, and actions into independent layers. The engine handles bitmap fonts, input events, 
+and custom animations, scripts, embeddings), covering the full webview workflow from document structure to interactive behavior. 
+Everything runs on ES5 for broad compatibility.
+
+Write your page in Markdown, configure rendering, input, and actions — the rest is up to you.
